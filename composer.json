@@ -1,0 +1,33 @@
+{
+    "name": "wp-cli/sql-transform",
+    "description": "Transforms to import/export/dump SQL across multiple dialects",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "WP_CLI\\SqlTransform\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WP_CLI\\SqlTransform\\Tests\\": "tests/"
+        }
+    
+    },
+    "authors": [
+        {
+            "name": "Alain Schlesser",
+            "email": "alain.schlesser@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "yoast/phpunit-polyfills": "^2.0",
+        "mikey179/vfsstream": "1.6.11"
+    },
+    "scripts": {
+        "test": "(phpunit --atleast-version 10.5 > /dev/null && phpunit -c phpunit10.xml.dist --no-coverage); (phpunit --atleast-version 10.5 > /dev/null || phpunit -c phpunit.xml.dist --no-coverage)",
+        "coverage": "(phpunit --atleast-version 10.5 > /dev/null && phpunit -c phpunit10.xml.dist); (phpunit --atleast-version 10.5 > /dev/null || phpunit -c phpunit.xml.dist)"
+    }
+}

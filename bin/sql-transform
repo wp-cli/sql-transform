@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+require_once dirname( __DIR__ ) . '/vendor/autoload.php';
+
+use WP_CLI\SqlTransform\Cli\TransformCommand;
+
+$command = new TransformCommand( $argv );
+$command->process();
